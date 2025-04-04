@@ -53,7 +53,7 @@ df = get_stock_data(ticker[0])  # Use the ticker symbol (first element of the tu
 if df.empty:
     st.error(f"Could not fetch data for {ticker[0]}. Please try again.")
 else:
-    st.write(f"Data for {ticker[0]} from {df.index.min()-5} to {df.index.max()}")
+    st.write(f"Data for {ticker[0]} from {df.index.max()-4} to {df.index.max()}")
     st.dataframe(df.tail())
 
     # Train the model
